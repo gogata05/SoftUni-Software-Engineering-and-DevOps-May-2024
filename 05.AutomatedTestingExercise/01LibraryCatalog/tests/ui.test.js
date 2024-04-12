@@ -118,7 +118,7 @@ test('Login with empty password field and valid email field', async ({ page }) =
 
 test('Register with valid credentials', async ({ page }) => {
     await page.goto('localhost:3000/register');
-    await page.fill('input[name="email"]', 'miroslav@abv.bg');
+    await page.fill('input[name="email"]', 'gogata1905@abv.bg');
     await page.fill('input[name="password"]', '123456');
     await page.fill('input[name="confirm-pass"]', '123456');
     await page.click('input[type="submit"]');
@@ -159,7 +159,7 @@ test('Register with empty email field and valid password fields', async ({ page 
 
 test('Register with empty password field and valid email and rePassword fields', async ({ page }) => {
     await page.goto('localhost:3000/register');
-    await page.fill('input[name="email"]', 'miroslav@abv.bg');
+    await page.fill('input[name="email"]', 'gogata1905@abv.bg');
     await page.fill('input[name="confirm-pass"]', '123456');
     await page.click('input[type="submit"]');
 
@@ -175,7 +175,7 @@ test('Register with empty password field and valid email and rePassword fields',
 
 test('Register with empty rePassword field and valid email and password fields', async ({ page }) => {
     await page.goto('localhost:3000/register');
-    await page.fill('input[name="email"]', 'miroslav@abv.bg');
+    await page.fill('input[name="email"]', 'gogata1905@abv.bg');
     await page.fill('input[name="password"]', '123456');
     await page.click('input[type="submit"]');
 
@@ -191,7 +191,7 @@ test('Register with empty rePassword field and valid email and password fields',
 
 test('Register with empty not matching passwords', async ({ page }) => {
     await page.goto('localhost:3000/register');
-    await page.fill('input[name="email"]', 'miroslav@abv.bg');
+    await page.fill('input[name="email"]', 'gogata1905@abv.bg');
     await page.fill('input[name="password"]', '123456');
     await page.fill('input[name="confirm-pass"]', '12345678');
     await page.click('input[type="submit"]');
