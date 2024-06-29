@@ -22,9 +22,8 @@ jobs:
         run: npm install
       - name: Run unit test for the application
         run: npm run test:unit
-      - name: Display Softuni Username
+      - name: gogata05
         run: echo 'georgi.markov'
-
   deploy:
     needs: build-test
     runs-on: ubuntu-latest

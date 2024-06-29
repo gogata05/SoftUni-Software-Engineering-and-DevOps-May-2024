@@ -1,8 +1,7 @@
-const { test, expect } = require('@playwright/test');
+const { test, expect } = require("@playwright/test");
 
-test('Check books page', async ({ page }) => {
-    await page.goto('https://georgimarkov-retake-exam.onrender.com/books');
-    const list = await page.$('ul');
-    expect(list).toBeTruthy();
-  });
-  
+test("Check books page", async ({ page }) => {
+  await page.goto("https://gogata05-exam.onrender.com/books");
+  const list = await page.$("ul");
+  expect(list).toBeTruthy();
+});
