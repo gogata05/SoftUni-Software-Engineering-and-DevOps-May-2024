@@ -1,8 +1,10 @@
-const { test, expect } = require('@playwright/test');
+const { test, expect } = require("@playwright/test");
 
-test('Check footer', async ({ page }) => {
-  await page.goto('https://georgi-markov-exam.onrender.com');
-  const footer = await page.$('footer');
+test("Check footer", async ({ page }) => {
+  await page.goto("https://gogata05-exam.onrender.com/");
+  const footer = await page.$("footer");
   const text = await footer.textContent();
-  expect(text).toContain('© 2023 - Software Engineering and DevOps regular exam');
+  expect(text).toContain(
+    "© 2023 - Software Engineering and DevOps regular exam"
+  );
 });
