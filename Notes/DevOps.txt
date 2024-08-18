@@ -1,0 +1,68 @@
+diffChecher/Check old ui tests solutions!
+
+#1.Working with Git and GitHub(.only): 
+1. Open the resources with "vs code" and "npm install"
+2. Init Repo with "vs code" with "gogata05-exam" folder and repo Name, and drag and     drop "gitIgnore" and "ReadMe.md" file//use the ready folder
+3. Create new branch "junior-dev" in vs code and alter the ReadMe.md with "gogata05" text and create a pull request
+4. Merge the two branches.
+
+#2.Fix Failing Tests: "junior-dev" 
+1.In Terminal make 2 tabs with "Tests" and "Server"
+2."npm start" in "Server"
+3."npx playwright install" in "Tests"
+
+   (wrong h1,wrong text,wrong url tests,wrong url index.js,wrong redirect with controller)
+4. "npm run test:unit" - to see if the unit tests are running (sometimes the command is npm run tests:unit) 
+5."npm run test:ui" in "Tests" too see what ui tests are falling
+6.Fix ui tests with "GPT" and the rest with "F12" Elements
+7.make pull request from "junior-dev" to "Main" and merch
+
+#3.Implement CI: "Main" (CI makes npm i and runs tests)
+1.Go to "Github Actions" and search "Node.js" and click "Configure" to make .yml
+2.Add from "pipeline.yml" the //4.Implement CI part and wait the tests to complate
+3.Go to "Main" branch and pull the changes
+
+#4.Implement CD: "Main" - render.com (CD is deploy)
+1.Go to "dashboard.render.com" and click New "Web Service"->"Build and deploy a Git repository"
+2.Choose the connect github repo and "Connect"
+3."Build Command" to "npm install"
+4."Start Command" to "npm run start"
+5.Free option and "Deploy Web Service" and wait the tests to complate
+6.add the //5.implement CD - render.com from "pipeline.yml" //commit after u add the 2 keys
+
+7.Go to project "Settings"->"Sectrets and variables"->"Actions"->"New repository secret"
+8.On "Name" add "MY_RENDER_SERVICE_ID"
+9.On "Secret" add from "Render.com" project in "Settings"->"Deploy Hook" 
+https://api.render.com/deploy/  srv-cpog5m2j1k6c73a6u190   ?key=4p2bOEOcpgE //only the srv part
+10.Add 2nd key: Go to project "Settings"->"Sectrets and variables"->"Actions"->"New repository secret"
+11.On "Name" add "MY_RENDER_API_KEY"
+12.On "Secret" add a key from "Render.com" project in "Account Settings"->"API Keys" or use my old key below:
+rnd_Bo4IQV1OrNjPo45xBpM9pp8eeF6y
+
+13.Commit .yml changes and use name "render job" for the commit
+14.Check if "render job" tests are running in "GitHub Actions" and if in "dashboard.render.com" the project is Deployed
+
+#5.Add UI Tests to CI/CD (here we change localhost to Web URL)
+1.add the //6.Add UI Tests to CI/CD  from "pipeline.yml"
+2.Replace "localhost:8080" with "https://gogata05-exam.onrender.com/" render.com url link the ui tests
+3.Commit .yml changes and use name "add ui tests" for the commit
+4.Check if "add ui tests" tests are running in "GitHub Actions"
+
+
+
+
+
+
+Requirements
+1.Rename "Solution-Resources-Template-Software-Engineering-and-DevOps.docx" with "gogata05_" infront and open it with Word
+2.Enter GitHub link and Render.com link
+3.Make 4 screenshots of: "GitHub Actions All Workflows" and the 3 Workflows inside: "CI","CD with render" and "ui tests"
+4.Make 5th screenshot of render.com url.
+5.Drag and Drop all 5 photos into: "GitHub Actions Screenshot" Word file
+
+
+Submission
+1.Close "all photos" and the "Word file"
+2.Make a zip with: "all the photos" and the "Solution Word file'
+
+
